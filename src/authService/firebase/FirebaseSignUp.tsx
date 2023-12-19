@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./Firebase";
-import { AuthData, UserData, onLogin } from "../../datastore/slice/AuthSlice";
+import { AuthData, UserData } from "../../datastore/slice/AuthSlice";
 
 export interface SignUpCred {
   fName: string;
@@ -30,6 +30,6 @@ export default function firebaseSignUp(
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
+      console.log(errorCode, errorMessage);
     });
 }

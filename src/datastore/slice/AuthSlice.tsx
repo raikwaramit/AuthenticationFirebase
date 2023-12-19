@@ -1,5 +1,4 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../Store";
 
 export interface UserData {
   firstName: string;
@@ -31,7 +30,6 @@ export const authSlice = createSlice({
   reducers: {
     onLogin: (state, action: PayloadAction<AuthData>) => {
       return action.payload;
-      console.log(state);
     },
     onSignOut: (state) => {
       state = initialState;
